@@ -1,25 +1,34 @@
-head, body { height:100% }
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap");
+
+head,
+body {
+  height: 100%;
+}
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  /* font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+    sans-serif; */
+  font-family: "Open Sans", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-body {
+.bg {
   /* background-image: url('https://images.pexels.com/photos/1572878/pexels-photo-1572878.jpeg?cs=srgb&dl=pexels-alexander-krivitskiy-1572878.jpg&fm=jpg'); */
-  background: url('https://wallpapercave.com/wp/wp2905625.jpg') no-repeat center center fixed; 
+  background: linear-gradient(
+      rgba(100, 100, 100, 0.5),
+      rgba(100, 100, 100, 0.5)
+    ),
+    url("./pages/bg.png") no-repeat center center fixed;
+  /* background-image: url("./pages/bg.png"); */
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  background-position: center;
-  
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
