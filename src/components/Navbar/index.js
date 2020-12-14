@@ -4,8 +4,8 @@ import {Navbar, Nav, NavDropdown, Form, FormControl, Button} from 'react-bootstr
 const Navi = () => {
     return (
         <div>
-            <Navbar bg="dark" expand="lg" variant="dark">
-            <Navbar.Brand href="home">Youtube Music Pro</Navbar.Brand>
+            <Navbar bg="warning" expand="lg" variant="light">
+                <Navbar.Brand href="home">Youtube Music Pro</Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="mr-auto">
@@ -21,7 +21,7 @@ const Navi = () => {
                     </Nav>
                     <Form inline>
                     <FormControl type="text" placeholder="Search" className="mr-sm-2" />
-                    <Button variant="outline-success">Search</Button>
+                    <Button variant="outline-secondary mx-auto">Search</Button>
                     </Form>
                 </Navbar.Collapse>
             </Navbar>
