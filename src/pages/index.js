@@ -1,11 +1,12 @@
 import React from 'react'
-import {Badge} from 'react-bootstrap'
+import { Badge } from 'react-bootstrap'
+import { Body } from './pageelements'
 
 const Home = () => {
     return (
-        <div>
-            <h1><Badge pill variant="warning">Hello World<Badge pill variant="success">~YMP</Badge></Badge></h1>
-        </div>
+        <Body>
+            <Badge pill variant="warning"><h1>Youtube Music Player</h1></Badge>
+        </Body>
     )
 }
 
