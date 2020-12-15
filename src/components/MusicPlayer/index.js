@@ -1,20 +1,27 @@
 import React from 'react'
 import ReactJkMusicPlayer from 'react-jinke-music-player'
-import 'react-jinke-music-player/assets/index.css'
 
 const audioList1 = [
     {
-        name: 'Despacito',
-        singer: 'Luis Fonsi',
+        name: 'Khalouni N3ich',
+        singer: 'Najwa Farouk (نجوة فاروق)',
         cover:
-          'http://res.cloudinary.com/alick/image/upload/v1502689731/Despacito_uvolhp.jpg',
+          'https://i.ytimg.com/vi_webp/Srt8QReWCLM/maxresdefault.webp',
         musicSrc:
-          'http://res.cloudinary.com/alick/video/upload/v1502689683/Luis_Fonsi_-_Despacito_ft._Daddy_Yankee_uyvqw9.mp3',
+          'https://youtube-music-pro.herokuapp.com/assets/Srt8QReWCLM.webm',
         // support async fetch music src. eg.
         // musicSrc: async () => {
         //   return await fetch('/api')
         // },
     },
+    // {
+    //     name: 'Despacito',
+    //     singer: 'Luis Fonsi',
+    //     cover:
+    //       'http://res.cloudinary.com/alick/image/upload/v1502689731/Despacito_uvolhp.jpg',
+    //     musicSrc:
+    //       'http://res.cloudinary.com/alick/video/upload/v1502689683/Luis_Fonsi_-_Despacito_ft._Daddy_Yankee_uyvqw9.mp3',
+    // },
 ]
 
 const options = {
