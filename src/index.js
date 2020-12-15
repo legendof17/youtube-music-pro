@@ -4,7 +4,6 @@ import './index.css';
 import App from './App';
 import * as serviceWorkerRegistration from './serviceWorkerRegistration';
 import reportWebVitals from './reportWebVitals';
-import 'bootstrap/dist/css/bootstrap.min.css';
 import 'react-jinke-music-player/assets/index.css'
 
 ReactDOM.render(
