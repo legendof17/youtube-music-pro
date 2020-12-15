@@ -1,28 +1,28 @@
 {
   "files": {
-    "main.css": "/static/css/main.dcbd40bc.chunk.css",
-    "main.js": "/static/js/main.8f766605.chunk.js",
-    "main.js.map": "/static/js/main.8f766605.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.0a8cc6f4.js",
-    "runtime-main.js.map": "/static/js/runtime-main.0a8cc6f4.js.map",
-    "static/css/2.20aa2d7b.chunk.css": "/static/css/2.20aa2d7b.chunk.css",
-    "static/js/2.bb275274.chunk.js": "/static/js/2.bb275274.chunk.js",
-    "static/js/2.bb275274.chunk.js.map": "/static/js/2.bb275274.chunk.js.map",
-    "static/js/3.3ded0dd9.chunk.js": "/static/js/3.3ded0dd9.chunk.js",
-    "static/js/3.3ded0dd9.chunk.js.map": "/static/js/3.3ded0dd9.chunk.js.map",
-    "index.html": "/index.html",
-    "service-worker.js": "/service-worker.js",
-    "service-worker.js.map": "/service-worker.js.map",
-    "static/css/2.20aa2d7b.chunk.css.map": "/static/css/2.20aa2d7b.chunk.css.map",
-    "static/css/main.dcbd40bc.chunk.css.map": "/static/css/main.dcbd40bc.chunk.css.map",
-    "static/js/2.bb275274.chunk.js.LICENSE.txt": "/static/js/2.bb275274.chunk.js.LICENSE.txt",
-    "static/media/index.css": "/static/media/bg.05515a68.png"
+    "main.css": "/youtube-music-pro/static/css/main.29b55acf.chunk.css",
+    "main.js": "/youtube-music-pro/static/js/main.b7e6a08f.chunk.js",
+    "main.js.map": "/youtube-music-pro/static/js/main.b7e6a08f.chunk.js.map",
+    "runtime-main.js": "/youtube-music-pro/static/js/runtime-main.42515e94.js",
+    "runtime-main.js.map": "/youtube-music-pro/static/js/runtime-main.42515e94.js.map",
+    "static/css/2.fb03de56.chunk.css": "/youtube-music-pro/static/css/2.fb03de56.chunk.css",
+    "static/js/2.595a8e0b.chunk.js": "/youtube-music-pro/static/js/2.595a8e0b.chunk.js",
+    "static/js/2.595a8e0b.chunk.js.map": "/youtube-music-pro/static/js/2.595a8e0b.chunk.js.map",
+    "static/js/3.99e27047.chunk.js": "/youtube-music-pro/static/js/3.99e27047.chunk.js",
+    "static/js/3.99e27047.chunk.js.map": "/youtube-music-pro/static/js/3.99e27047.chunk.js.map",
+    "index.html": "/youtube-music-pro/index.html",
+    "service-worker.js": "/youtube-music-pro/service-worker.js",
+    "service-worker.js.map": "/youtube-music-pro/service-worker.js.map",
+    "static/css/2.fb03de56.chunk.css.map": "/youtube-music-pro/static/css/2.fb03de56.chunk.css.map",
+    "static/css/main.29b55acf.chunk.css.map": "/youtube-music-pro/static/css/main.29b55acf.chunk.css.map",
+    "static/js/2.595a8e0b.chunk.js.LICENSE.txt": "/youtube-music-pro/static/js/2.595a8e0b.chunk.js.LICENSE.txt",
+    "static/media/index.css": "/youtube-music-pro/static/media/bg.05515a68.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.0a8cc6f4.js",
-    "static/css/2.20aa2d7b.chunk.css",
-    "static/js/2.bb275274.chunk.js",
-    "static/css/main.dcbd40bc.chunk.css",
-    "static/js/main.8f766605.chunk.js"
+    "static/js/runtime-main.42515e94.js",
+    "static/css/2.fb03de56.chunk.css",
+    "static/js/2.595a8e0b.chunk.js",
+    "static/css/main.29b55acf.chunk.css",
+    "static/js/main.b7e6a08f.chunk.js"
   ]
 }
