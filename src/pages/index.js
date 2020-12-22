@@ -1,12 +1,22 @@
 import React, { Component }from 'react'
-import { Form, Button } from 'react-bootstrap'
+import { Form, InputGroup } from 'react-bootstrap'
 import Intro from '../components/Home/intro'
 import MusicPlayer from '../components/MusicPlayer'
 import { Body } from './pageelements'
 
 export default class Home extends Component {
-    state = {
-        loading: true,
+    constructor(props) {
+        super(props);
+        this.state = {
+            loading: true,
+            value: '',
+            song: false
+        }
+
+        this.songName = this.state.song
+
+        this.handleChange = this.handleChange.bind(this);
+        this.onSubmit = this.onSubmit.bind(this);
     }
 
     async componentDidMount() {
@@ -18,8 +28,14 @@ export default class Home extends Component {
         return new Promise(resolve => setTimeout(resolve, ms));
     }
 
-    onSubmit() {
-        alert('Please wait...')
+    handleChange(event) {
+        this.setState({value: event.target.value});
+    }
+
+    onSubmit(event) {
+        event.preventDefault();
+        this.setState({song: true})
+        this.songName = this.state.value
     }
  
     render() {
@@ -28,15 +44,18 @@ export default class Home extends Component {
                 {this.state.loading ? (
                     <Intro />
                 ) : (
-                <Form>
-                    <Form.Group>
-                        <Form.Control size="lg" type="text" placeholder="Large text" />
-                    </Form.Group>
-                    <Button type="submit" onClick={this.onSubmit}>
-                        Submit
-                    </Button>
-                </Form>
-                )}
+                this.state.song ? (
+                    MusicPlayer(this.songName)
+                ) : (
+                    <Form onSubmit={this.onSubmit}>
+                        <InputGroup>
+                            <InputGroup.Prepend>
+                                <InputGroup.Text id="basic-addon1">♫</InputGroup.Text>
+                            </InputGroup.Prepend>
+                            <Form.Control autoFocus size="lg" type="text" placeholder="Enter Song Name" value={this.state.value} onChange={this.handleChange} />
+                        </InputGroup>
+                    </Form>
+                ))}
             </Body>
         )
     }
