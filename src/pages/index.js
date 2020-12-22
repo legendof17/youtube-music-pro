@@ -1,15 +1,43 @@
-import React from 'react'
-import { Badge } from 'react-bootstrap'
+import React, { Component }from 'react'
+import { Form, Button } from 'react-bootstrap'
+import Intro from '../components/Home/intro'
 import MusicPlayer from '../components/MusicPlayer'
 import { Body } from './pageelements'
 
-const Home = () => {
-    return (
-        <Body className='index-body'>
-            <Badge pill variant="warning"><h1>Youtube Music Pro</h1></Badge>
-            <MusicPlayer showMediaSession />
-        </Body>
-    )
-}
+export default class Home extends Component {
+    state = {
+        loading: true,
+    }
 
-export default Home
+    async componentDidMount() {
+        await this.sleep(13000)
+        this.setState({loading: false})
+    }
+
+    sleep(ms) {
+        return new Promise(resolve => setTimeout(resolve, ms));
+    }
+
+    onSubmit() {
+        alert('Please wait...')
+    }
+ 
+    render() {
+        return (
+            <Body className='index-body'>
+                {this.state.loading ? (
+                    <Intro />
+                ) : (
+                <Form>
+                    <Form.Group>
+                        <Form.Control size="lg" type="text" placeholder="Large text" />
+                    </Form.Group>
+                    <Button type="submit" onClick={this.onSubmit}>
+                        Submit
+                    </Button>
+                </Form>
+                )}
+            </Body>
+        )
+    }
+}
