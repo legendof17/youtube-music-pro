@@ -68,10 +68,11 @@ const options = {
     mobileMediaQuery: '(max-width: 1024px)'
 }
 
-const MusicPlayer = () => {
+const MusicPlayer = (props) => {
+    alert('Your Song Name : '+ props)
     return (
         <div>
-            <ReactJkMusicPlayer {...options} />            
+            <ReactJkMusicPlayer {...options} />
         </div>
     )
 }
