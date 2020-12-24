@@ -3,7 +3,7 @@ import Assetfinder from './assetfinder';
 
 export default async function Songstatusfixer(url,id) {
     let status = await Assetfinder(url)
-    if (status == 200) {
+    if (status === 200) {
         return url
     }
     else {
