@@ -7,7 +7,7 @@ export default async function Songstatusfixer(url,id) {
         return url
     }
     else {
-        await axios.get('http://localhost:6001/http://youtube-music-pro.herokuapp.com/exp?t='+id, {validateStatus: () => true})
+        await axios.get('http://youtube-music-pro.herokuapp.com/exp?t='+id, {validateStatus: () => true})
         return 'http://youtube-music-pro.herokuapp.com/assets/'+id+'.webm'
     }
 }
