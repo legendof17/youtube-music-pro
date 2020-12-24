@@ -1,7 +1,7 @@
 import React, { Component }from 'react'
 import { Form, InputGroup } from 'react-bootstrap'
+import Ultimateapi from '../api/ultimateapi'
 import Intro from '../components/Home/intro'
-import MusicPlayer from '../components/MusicPlayer'
 import { Body } from './pageelements'
 
 export default class Home extends Component {
@@ -45,7 +45,7 @@ export default class Home extends Component {
                     <Intro />
                 ) : (
                 this.state.song ? (
-                    MusicPlayer(this.songName)
+                    <Ultimateapi name={this.songName} />
                 ) : (
                     <Form onSubmit={this.onSubmit}>
                         <InputGroup>
