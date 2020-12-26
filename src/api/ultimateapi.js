@@ -21,8 +21,9 @@ export default class Ultimateapi extends React.Component {
     async initrun(name) {
         let id = await Nametoid(name)
         let data = await Infoextract(id)
-        data['url'] = await Songstatusfixer(data['url'],id)
-        this.setState({status: await Assetfinder(data['url'])})
+        // will enable these advance functions on upcoming versions
+        // data['url'] = await Songstatusfixer(data['url'],id)
+        // this.setState({status: await Assetfinder(data['url'])})
         return data
     }
 
