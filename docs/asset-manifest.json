@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/youtube-music-pro/static/css/main.29b55acf.chunk.css",
-    "main.js": "/youtube-music-pro/static/js/main.ab72616a.chunk.js",
-    "main.js.map": "/youtube-music-pro/static/js/main.ab72616a.chunk.js.map",
+    "main.js": "/youtube-music-pro/static/js/main.e9d4dfe9.chunk.js",
+    "main.js.map": "/youtube-music-pro/static/js/main.e9d4dfe9.chunk.js.map",
     "runtime-main.js": "/youtube-music-pro/static/js/runtime-main.f392ffc3.js",
     "runtime-main.js.map": "/youtube-music-pro/static/js/runtime-main.f392ffc3.js.map",
     "static/css/2.5d8d2d14.chunk.css": "/youtube-music-pro/static/css/2.5d8d2d14.chunk.css",
@@ -23,6 +23,6 @@
     "static/css/2.5d8d2d14.chunk.css",
     "static/js/2.cf03aa00.chunk.js",
     "static/css/main.29b55acf.chunk.css",
-    "static/js/main.ab72616a.chunk.js"
+    "static/js/main.e9d4dfe9.chunk.js"
   ]
 }
