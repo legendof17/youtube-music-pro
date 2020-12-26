@@ -1,4 +1,5 @@
 import React from 'react'
+import MusicPlayer from '../components/MusicPlayer';
 import Assetfinder from './assetfinder';
 import Infoextract from './infoextract';
 import Nametoid from './nametoid';
@@ -41,14 +42,21 @@ export default class Ultimateapi extends React.Component {
 
     render() {
         return (
+            // <div>
+            //     <h1>Hello</h1>
+            //     <h1>Status: {this.state.status}</h1>
+            //     <h1>ID: {this.state.id}</h1>
+            //     <h1>SongName: {this.state.songname}</h1>
+            //     <h1>Artist: {this.state.artist}</h1>
+            //     <h1>Thumbnail: {this.state.thumbnail}</h1>
+            //     <h1>Songurl: {this.state.songurl}</h1>
+            // </div>
             <div>
-                <h1>Hello</h1>
-                <h1>Status: {this.state.status}</h1>
-                <h1>ID: {this.state.id}</h1>
-                <h1>SongName: {this.state.songname}</h1>
-                <h1>Artist: {this.state.artist}</h1>
-                <h1>Thumbnail: {this.state.thumbnail}</h1>
-                <h1>Songurl: {this.state.songurl}</h1>
+                {this.state.songname ? (
+                    <MusicPlayer {...this.state} />
+                ) : (
+                    <h1>loading</h1>
+                )}
             </div>
         )
     }
