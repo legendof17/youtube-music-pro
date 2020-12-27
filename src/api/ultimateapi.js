@@ -1,9 +1,10 @@
 import React from 'react'
 import MusicPlayer from '../components/MusicPlayer';
-import Assetfinder from './assetfinder';
-import Infoextract from './infoextract';
-import Nametoid from './nametoid';
-import Songstatusfixer from './songstatusfixer';
+// import Assetfinder from './assetfinder';
+// import Infoextract from './infoextract';
+// import Nametoid from './nametoid';
+import ProApi from './proapi';
+// import Songstatusfixer from './songstatusfixer';
 
 export default class Ultimateapi extends React.Component {
     constructor(props) {
@@ -20,16 +21,17 @@ export default class Ultimateapi extends React.Component {
     }
 
     async initrun(name) {
-        let id = await Nametoid(name)
-        let data = await Infoextract(id)
+        // let id = await Nametoid(name)
+        // let data = await Infoextract(id)
         // will enable these advance functions on upcoming versions
         // data['url'] = await Songstatusfixer(data['url'],id)
         // this.setState({status: await Assetfinder(data['url'])})
-        return data
+        // return data
     }
 
     async componentDidMount() {
-        const data = await this.initrun(this.query_name)
+        const data = await ProApi(this.query_name+' official song',1)
+        // const data = await this.initrun(this.query_name)
         this.setState({
             songname: data['title'],
             artist: data['artist'],
