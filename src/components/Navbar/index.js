@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-router-dom'
 import {Nav} from 'react-bootstrap';
 import { Navbar1, NavbarBrand, toggleFullScreen } from './navbarelements';
 
@@ -10,9 +11,9 @@ const Navi = () => {
                 <Navbar1.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar1.Collapse id="basic-navbar-nav">
                     <Nav className="mr-auto">
-                    <Nav.Link href="/">Home</Nav.Link>
-                    <Nav.Link href="link">Link</Nav.Link>
-                    <Nav.Link href="github">GitHub</Nav.Link>
+                    <Nav.Link as={Link} to="/">Home</Nav.Link>
+                    <Nav.Link as={Link} to="link">Link</Nav.Link>
+                    <Nav.Link as={Link} to="github">GitHub</Nav.Link>
                     <Nav.Link onClick={toggleFullScreen}>F</Nav.Link>
                     </Nav>
                 </Navbar1.Collapse>
