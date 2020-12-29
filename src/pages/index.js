@@ -1,7 +1,7 @@
 import React, { Component }from 'react'
 import { Form, InputGroup } from 'react-bootstrap'
 import Ultimateapi from '../api/ultimateapi'
-import Intro from '../components/Home/intro'
+import Neon from '../components/Home/NeonIntro'
 import { Body } from './pageelements'
 
 export default class Home extends Component {
@@ -20,7 +20,8 @@ export default class Home extends Component {
     }
 
     async componentDidMount() {
-        await this.sleep(13000)
+        // await this.sleep(13000)
+        await this.sleep(5000)
         this.setState({loading: false})
     }
 
@@ -42,7 +43,8 @@ export default class Home extends Component {
         return (
             <Body className='index-body'>
                 {this.state.loading ? (
-                    <Intro />
+                    // <Intro />
+                    <Neon />
                 ) : (
                 this.state.song ? (
                     <Ultimateapi name={this.songName} />
