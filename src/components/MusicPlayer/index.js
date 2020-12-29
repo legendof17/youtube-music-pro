@@ -42,7 +42,7 @@ const MusicPlayer = (data) => {
             bottom: 70,
         },
         defaultPlayMode: 'order',
-        mode: 'mini',
+        mode: 'full',
         once: false,
         autoPlay: true,
         toggleMode: true,
