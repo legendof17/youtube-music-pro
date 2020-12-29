@@ -1,5 +1,5 @@
 import React from 'react';
-import {Navbar, Nav, NavDropdown, Form, FormControl, Button} from 'react-bootstrap';
+import {Nav} from 'react-bootstrap';
 import { Navbar1, NavbarBrand, toggleFullScreen } from './navbarelements';
 
 const Navi = () => {
