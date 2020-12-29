@@ -31,19 +31,22 @@ export default class Home extends Component {
     }
 
     handleChange(event) {
+        // console.log(event.target.value)
         this.setState({value: event.target.value});
     }
 
     async onSubmit(event) {
         event.preventDefault();
-        this.setState({song: true})
         this.songName = this.state.value
+        this.setState({song: true})
         this.setState({sload: false})
-        await this.sleep(5000)
+        await this.sleep(1000)
+        this.setState({song: false})
         this.sloadfn(event)
     }
 
     async sloadfn() {
+        this.setState({song: true})
         this.setState({value: ''})
         this.setState({sload: true})
     }
