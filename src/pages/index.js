@@ -40,10 +40,11 @@ export default class Home extends Component {
         this.songName = this.state.value
         this.setState({sload: false})
         await this.sleep(5000)
-        this.sloadfn()
+        this.sloadfn(event)
     }
 
     async sloadfn() {
+        this.setState({value: ''})
         this.setState({sload: true})
     }
  
@@ -62,7 +63,7 @@ export default class Home extends Component {
                                     <InputGroup.Prepend>
                                         <InputGroup.Text id="basic-addon1">♫</InputGroup.Text>
                                     </InputGroup.Prepend>
-                                    <Form.Control autoFocus size="lg" type="text" placeholder="Enter Song Name" value={this.state.value} onChange={this.handleChange} />
+                                    <Form.Control size="lg" type="text" placeholder="Enter Song Name" value={this.state.value} onChange={this.handleChange} />
                                 </InputGroup>
                             </Form>
                         ) : (null)}
