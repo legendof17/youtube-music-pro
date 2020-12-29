@@ -10,7 +10,8 @@ export default class Home extends Component {
         this.state = {
             loading: true,
             value: '',
-            song: false
+            song: false,
+            sload: false
         }
 
         this.songName = this.state.song
@@ -33,10 +34,17 @@ export default class Home extends Component {
         this.setState({value: event.target.value});
     }
 
-    onSubmit(event) {
+    async onSubmit(event) {
         event.preventDefault();
         this.setState({song: true})
         this.songName = this.state.value
+        this.setState({sload: false})
+        await this.sleep(5000)
+        this.sloadfn()
+    }
+
+    async sloadfn() {
+        this.setState({sload: true})
     }
  
     render() {
@@ -47,7 +55,19 @@ export default class Home extends Component {
                     <Neon />
                 ) : (
                 this.state.song ? (
-                    <Ultimateapi name={this.songName} />
+                    <div>
+                        {this.state.sload ? (
+                            <Form onSubmit={this.onSubmit}>
+                                <InputGroup>
+                                    <InputGroup.Prepend>
+                                        <InputGroup.Text id="basic-addon1">♫</InputGroup.Text>
+                                    </InputGroup.Prepend>
+                                    <Form.Control autoFocus size="lg" type="text" placeholder="Enter Song Name" value={this.state.value} onChange={this.handleChange} />
+                                </InputGroup>
+                            </Form>
+                        ) : (null)}
+                        <Ultimateapi name={this.songName} />
+                    </div>
                 ) : (
                     <Form onSubmit={this.onSubmit}>
                         <InputGroup>
