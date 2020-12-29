@@ -7,7 +7,17 @@ export const Navbar1 = styled(Navbar)`
 `;
 
 export const NavbarBrand = styled(Navbar.Brand)`
+  color: white;
+  font-size: 20px;
+  padding-right: 1rem;
+  // font-weight: bold;
+  text-decoration: none;
   font-family: 'Nerko One';
+
+  &:hover {
+    color: white;
+    text-decoration: none;
+  }
 `;
 
 export const toggleFullScreen = () => {

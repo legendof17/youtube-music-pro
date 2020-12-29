@@ -7,7 +7,8 @@ const Navi = () => {
     return (
         <div>
             <Navbar1 expand="md" variant="dark">
-                <NavbarBrand href="/">Youtube Music Pro</NavbarBrand>
+                <NavbarBrand as={Link} to="/">Youtube Music Pro</NavbarBrand>
+                {/* <NavbarBrand href="/">Youtube Music Pro</NavbarBrand> */}
                 <Navbar1.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar1.Collapse id="basic-navbar-nav">
                     <Nav className="mr-auto">
