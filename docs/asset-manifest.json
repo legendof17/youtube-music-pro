@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/youtube-music-pro/static/css/main.0170ffaa.chunk.css",
-    "main.js": "/youtube-music-pro/static/js/main.6bfab529.chunk.js",
-    "main.js.map": "/youtube-music-pro/static/js/main.6bfab529.chunk.js.map",
+    "main.js": "/youtube-music-pro/static/js/main.a7468006.chunk.js",
+    "main.js.map": "/youtube-music-pro/static/js/main.a7468006.chunk.js.map",
     "runtime-main.js": "/youtube-music-pro/static/js/runtime-main.7bfa5592.js",
     "runtime-main.js.map": "/youtube-music-pro/static/js/runtime-main.7bfa5592.js.map",
     "static/css/2.5d8d2d14.chunk.css": "/youtube-music-pro/static/css/2.5d8d2d14.chunk.css",
-    "static/js/2.fc69fa1d.chunk.js": "/youtube-music-pro/static/js/2.fc69fa1d.chunk.js",
-    "static/js/2.fc69fa1d.chunk.js.map": "/youtube-music-pro/static/js/2.fc69fa1d.chunk.js.map",
+    "static/js/2.0014d5c7.chunk.js": "/youtube-music-pro/static/js/2.0014d5c7.chunk.js",
+    "static/js/2.0014d5c7.chunk.js.map": "/youtube-music-pro/static/js/2.0014d5c7.chunk.js.map",
     "static/js/3.c01d1484.chunk.js": "/youtube-music-pro/static/js/3.c01d1484.chunk.js",
     "static/js/3.c01d1484.chunk.js.map": "/youtube-music-pro/static/js/3.c01d1484.chunk.js.map",
     "index.html": "/youtube-music-pro/index.html",
@@ -15,15 +15,15 @@
     "service-worker.js.map": "/youtube-music-pro/service-worker.js.map",
     "static/css/2.5d8d2d14.chunk.css.map": "/youtube-music-pro/static/css/2.5d8d2d14.chunk.css.map",
     "static/css/main.0170ffaa.chunk.css.map": "/youtube-music-pro/static/css/main.0170ffaa.chunk.css.map",
-    "static/js/2.fc69fa1d.chunk.js.LICENSE.txt": "/youtube-music-pro/static/js/2.fc69fa1d.chunk.js.LICENSE.txt",
+    "static/js/2.0014d5c7.chunk.js.LICENSE.txt": "/youtube-music-pro/static/js/2.0014d5c7.chunk.js.LICENSE.txt",
     "static/media/index.css": "/youtube-music-pro/static/media/bg.05515a68.png",
     "static/media/style.css": "/youtube-music-pro/static/media/neonlight.2a903a9f.ttf"
   },
   "entrypoints": [
     "static/js/runtime-main.7bfa5592.js",
     "static/css/2.5d8d2d14.chunk.css",
-    "static/js/2.fc69fa1d.chunk.js",
+    "static/js/2.0014d5c7.chunk.js",
     "static/css/main.0170ffaa.chunk.css",
-    "static/js/main.6bfab529.chunk.js"
+    "static/js/main.a7468006.chunk.js"
   ]
 }
