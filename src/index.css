@@ -20,7 +20,8 @@ body {
       rgba(100, 100, 100, 0.5),
       rgba(100, 100, 100, 0.5)
     ),
-    url("./pages/bg.png") no-repeat center center fixed;
+    /* url("./pages/bg.png") no-repeat center center fixed; */
+      url("./pages/bg.webp") no-repeat center center fixed;
   /* background-image: url("./pages/bg.png"); */
   -webkit-background-size: cover;
   -moz-background-size: cover;
