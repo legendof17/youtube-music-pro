@@ -5,7 +5,7 @@ const Neon = () => {
         <div className="sign">
             <span className="fast-flicker">Y</span>o<span className="fast-flicker">ut</span>ub<span className="fast-flicker">e</span><span className="flicker">
                 <br />
-                <span className="fast-flicker">M</span>us<span className="fast-flicker">ic</span></span>P<span className="fast-flicker">ro</span>
+                M<span className="fast-flicker">us</span>icP<span className="fast-flicker">r</span></span>o
         </div>
     )
 }
