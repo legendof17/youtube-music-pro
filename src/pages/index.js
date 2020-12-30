@@ -1,8 +1,10 @@
-import React, { Component }from 'react'
+import React, { Suspense, Component }from 'react'
 import { Form, InputGroup } from 'react-bootstrap'
 import Ultimateapi from '../api/ultimateapi'
-import Neon from '../components/Home/NeonIntro'
+// import Neon from '../components/Home/NeonIntro'
 import { Body } from './pageelements'
+
+const Neon = React.lazy(() => import('../components/Home/NeonIntro'))
 
 export default class Home extends Component {
     constructor(props) {
@@ -56,7 +58,10 @@ export default class Home extends Component {
             <Body className='index-body'>
                 {this.state.loading ? (
                     // <Intro />
-                    <Neon />
+                    // <Neon />
+                    <Suspense fallback={<div>Loading...</div>}>
+                        <Neon />
+                    </Suspense>
                 ) : (
                 this.state.song ? (
                     <div>

@@ -1,6 +1,7 @@
 import React from 'react'
-import ReactJkMusicPlayer from 'react-jinke-music-player'
+// import ReactJkMusicPlayer from 'react-jinke-music-player'
 
+const ReactJkMusicPlayer = React.lazy(() => import('react-jinke-music-player'))
 
 const MusicPlayer = (data) => {
     // console.log(data)
@@ -70,7 +71,9 @@ const MusicPlayer = (data) => {
     }
     return (
         <div>
-            <ReactJkMusicPlayer {...options} />
+            <React.Suspense fallback={<div>Loading...</div>}>
+                <ReactJkMusicPlayer {...options} />
+            </React.Suspense>
         </div>
     )
 }
