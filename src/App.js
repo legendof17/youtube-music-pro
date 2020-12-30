@@ -10,6 +10,8 @@ function App() {
       <Navbar />
       <Switch>
         <Route path='/' exact component={Home} />
+        {/* <Route path='/Legendof17' exact render={() => (window.location = "https://github.com/legendof17")} /> */}
+        {/* <Route path='/github' exact render={() => (window.location = "https://github.com/legendof17/youtube-music-pro")} /> */}
         <Redirect path='*' to='/' />
       </Switch>
     </Router>
