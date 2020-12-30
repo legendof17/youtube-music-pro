@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { Navbar } from 'react-bootstrap';
+import {Nav} from 'react-bootstrap';
 
 export const Navbar1 = styled(Navbar)`
   background-color: #020001;
@@ -14,6 +15,14 @@ export const NavbarBrand = styled(Navbar.Brand)`
   text-decoration: none;
   font-family: 'Nerko One';
 
+  &:hover {
+    color: white;
+    text-decoration: none;
+  }
+`;
+
+export const Copyright = styled(Nav.Link)`
+  color: white;
   &:hover {
     color: white;
     text-decoration: none;
