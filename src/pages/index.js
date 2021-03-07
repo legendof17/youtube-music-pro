@@ -1,6 +1,7 @@
 import React, { Suspense, Component }from 'react'
 import { Form, InputGroup } from 'react-bootstrap'
 import Ultimateapi from '../api/ultimateapi'
+import IdleAnnimationFN from '../components/Misc/idleAnnimation'
 // import Neon from '../components/Home/NeonIntro'
 import { Body } from './pageelements'
 
@@ -13,13 +14,16 @@ export default class Home extends Component {
             loading: true,
             value: '',
             song: false,
-            sload: false
+            sload: false,
+            animation: false
         }
 
         this.songName = this.state.song
 
         this.handleChange = this.handleChange.bind(this);
         this.onSubmit = this.onSubmit.bind(this);
+        this.startanim = this.startanim.bind(this);
+        this.stopanim = this.stopanim.bind(this);
     }
 
     async componentDidMount() {
@@ -52,10 +56,19 @@ export default class Home extends Component {
         this.setState({value: ''})
         this.setState({sload: true})
     }
+
+    startanim(event) {
+        this.setState({animation: true})
+    }
+
+    stopanim(event) {
+        this.setState({animation: false})
+    }
  
     render() {
         return (
             <Body className='index-body'>
+                <IdleAnnimationFN loadanim={this.state.loading} startanimation={this.startanim} stopanimation={this.stopanim} />
                 {this.state.loading ? (
                     // <Intro />
                     // <Neon />
@@ -66,15 +79,18 @@ export default class Home extends Component {
                 this.state.song ? (
                     <div>
                         {this.state.sload ? (
-                            <Form onSubmit={this.onSubmit}>
-                                <InputGroup>
-                                    <InputGroup.Prepend>
-                                        <InputGroup.Text id="basic-addon1">♫</InputGroup.Text>
-                                    </InputGroup.Prepend>
-                                    <Form.Control size="lg" type="text" placeholder="Enter Song Name" value={this.state.value} onChange={this.handleChange} />
-                                </InputGroup>
-                            </Form>
-                        ) : (null)}
+                            this.state.animation ? (
+                                <Neon />
+                            ) : (
+                                <Form onSubmit={this.onSubmit}>
+                                    <InputGroup>
+                                        <InputGroup.Prepend>
+                                            <InputGroup.Text id="basic-addon1">♫</InputGroup.Text>
+                                        </InputGroup.Prepend>
+                                        <Form.Control size="lg" type="text" placeholder="Enter Song Name" value={this.state.value} onChange={this.handleChange} />
+                                    </InputGroup>
+                                </Form>
+                        )) : (null)}
                         <Ultimateapi name={this.songName} />
                     </div>
                 ) : (
