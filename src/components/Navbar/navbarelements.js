@@ -24,9 +24,11 @@ export const NavbarBrand = styled(Navbar.Brand)`
 
 export const Copyright = styled(Nav.Link)`
   color: white;
+  font-weight: 600;
   &:hover {
     color: white;
     text-decoration: none;
+    font-weight: 1000;
   }
 `;
 
