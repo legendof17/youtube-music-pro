@@ -3,7 +3,8 @@ import { Navbar } from 'react-bootstrap';
 import {Nav} from 'react-bootstrap';
 
 export const Navbar1 = styled(Navbar)`
-  background-color: #020001;
+  // background-color: #020001;
+  background: linear-gradient(rgba(0, 0, 0, 0.95),rgba(100, 100, 100, 0.0));
   min-height: 70px;
 `;
 
