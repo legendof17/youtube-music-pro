@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/youtube-music-pro/static/css/main.46df0252.chunk.css",
-    "main.js": "/youtube-music-pro/static/js/main.e9c79f14.chunk.js",
-    "main.js.map": "/youtube-music-pro/static/js/main.e9c79f14.chunk.js.map",
+    "main.css": "/youtube-music-pro/static/css/main.fe40347f.chunk.css",
+    "main.js": "/youtube-music-pro/static/js/main.91b2d4ae.chunk.js",
+    "main.js.map": "/youtube-music-pro/static/js/main.91b2d4ae.chunk.js.map",
     "runtime-main.js": "/youtube-music-pro/static/js/runtime-main.d8795097.js",
     "runtime-main.js.map": "/youtube-music-pro/static/js/runtime-main.d8795097.js.map",
     "static/js/2.6320e71b.chunk.js": "/youtube-music-pro/static/js/2.6320e71b.chunk.js",
@@ -20,17 +20,17 @@
     "service-worker.js.map": "/youtube-music-pro/service-worker.js.map",
     "static/css/3.4b5ceabc.chunk.css.map": "/youtube-music-pro/static/css/3.4b5ceabc.chunk.css.map",
     "static/css/4.3b2ee77e.chunk.css.map": "/youtube-music-pro/static/css/4.3b2ee77e.chunk.css.map",
-    "static/css/main.46df0252.chunk.css.map": "/youtube-music-pro/static/css/main.46df0252.chunk.css.map",
+    "static/css/main.fe40347f.chunk.css.map": "/youtube-music-pro/static/css/main.fe40347f.chunk.css.map",
     "static/js/2.6320e71b.chunk.js.LICENSE.txt": "/youtube-music-pro/static/js/2.6320e71b.chunk.js.LICENSE.txt",
     "static/js/3.fd2425cf.chunk.js.LICENSE.txt": "/youtube-music-pro/static/js/3.fd2425cf.chunk.js.LICENSE.txt",
-    "static/media/index.css": "/youtube-music-pro/static/media/bg.97771920.webp",
+    "static/media/index.css": "/youtube-music-pro/static/media/bg.ccb64468.webp",
     "static/media/style.css": "/youtube-music-pro/static/media/neonlight.2a903a9f.ttf"
   },
   "entrypoints": [
     "static/js/runtime-main.d8795097.js",
     "static/css/3.4b5ceabc.chunk.css",
     "static/js/3.fd2425cf.chunk.js",
-    "static/css/main.46df0252.chunk.css",
-    "static/js/main.e9c79f14.chunk.js"
+    "static/css/main.fe40347f.chunk.css",
+    "static/js/main.91b2d4ae.chunk.js"
   ]
 }
