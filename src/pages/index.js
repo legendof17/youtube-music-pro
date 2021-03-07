@@ -7,6 +7,10 @@ import { Body } from './pageelements'
 
 const Neon = React.lazy(() => import('../components/Home/NeonIntro'))
 
+const TopBeast = React.lazy(() => import('../components/Home/NeonIntro/topbeast'))
+
+const Legendof17 = React.lazy(() => import('../components/Home/NeonIntro/legendof17'))
+
 export default class Home extends Component {
     constructor(props) {
         super(props);
@@ -15,7 +19,8 @@ export default class Home extends Component {
             value: '',
             song: false,
             sload: false,
-            animation: false
+            animation: false,
+            animswkey: -1
         }
 
         this.songName = this.state.song
@@ -24,6 +29,7 @@ export default class Home extends Component {
         this.onSubmit = this.onSubmit.bind(this);
         this.startanim = this.startanim.bind(this);
         this.stopanim = this.stopanim.bind(this);
+        this.animswitch = this.animswitch.bind(this);
     }
 
     async componentDidMount() {
@@ -57,12 +63,33 @@ export default class Home extends Component {
         this.setState({sload: true})
     }
 
-    startanim(event) {
+    async startanim(event) {
+        await this.setState(prevState => ({ animswkey: prevState.animswkey + 1}))
+        if (this.state.animswkey === 4) {
+            this.setState({animswkey: 1})
+        }
         this.setState({animation: true})
     }
 
     stopanim(event) {
         this.setState({animation: false})
+    }
+
+    animswitch(event) {
+        console.log(this.state.animswkey)
+        switch (this.state.animswkey) {
+            case 1:
+                return <Neon />
+            
+            case 2:
+                return <TopBeast />
+
+            case 3:
+                return <Legendof17 />
+
+            default:
+                return <Neon />
+        }
     }
  
     render() {
@@ -80,7 +107,9 @@ export default class Home extends Component {
                     <div>
                         {this.state.sload ? (
                             this.state.animation ? (
-                                <Neon />
+                                <Suspense fallback={<div>Loading...</div>}>
+                                    {this.animswitch(this.state.animswkey)}
+                                </Suspense>
                             ) : (
                                 <Form onSubmit={this.onSubmit}>
                                     <InputGroup>
