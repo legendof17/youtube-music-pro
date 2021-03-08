@@ -38,6 +38,7 @@ export default class Ultimateapi extends React.Component {
             cover: data['thumbnail'],
             musicSrc: data['url'],
             // id: data['id']
+            timeStamp: new Date().getTime(),
         }
 
         localStorage.setItem(name,JSON.stringify(templist))
@@ -67,6 +68,7 @@ export default class Ultimateapi extends React.Component {
         //     id: data['id'],
         // })
         this.audioListsx = await this.generateList(data,this.query_name)
+        this.audioListsx.sort( function ( a, b ) { return b.timeStamp - a.timeStamp } )
         localStorage.setItem('song-list',JSON.stringify(this.audioListsx))
         this.setState({songname: data['title']})
         // console.log(this.audioListsx)
