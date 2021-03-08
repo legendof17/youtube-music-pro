@@ -24,6 +24,8 @@ export default class Home extends Component {
         }
 
         this.songName = this.state.song
+        this.x = document.getElementsByClassName("play-btn")
+        
 
         this.handleChange = this.handleChange.bind(this);
         this.onSubmit = this.onSubmit.bind(this);
@@ -106,7 +108,7 @@ export default class Home extends Component {
                 this.state.song ? (
                     <div>
                         {this.state.sload ? (
-                            this.state.animation ? (
+                            this.state.animation && (this.x[0].outerHTML.search('Click to pause') !== -1) ? (
                                 <Suspense fallback={<div>Loading...</div>}>
                                     {this.animswitch(this.state.animswkey)}
                                 </Suspense>
