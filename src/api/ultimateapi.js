@@ -17,7 +17,9 @@ export default class Ultimateapi extends React.Component {
             thumbnail: null,
             songurl: null,
         }
+        this.audioListsx = []
         this.query_name = props.name;
+        this.generateList = this.generateList.bind(this);
     }
 
     async initrun(name) {
@@ -29,16 +31,45 @@ export default class Ultimateapi extends React.Component {
         // return data
     }
 
+    async generateList(data,name) {
+        let templist = {
+            name: data['title'],
+            singer: data['artist'],
+            cover: data['thumbnail'],
+            musicSrc: data['url'],
+            // id: data['id']
+        }
+
+        localStorage.setItem(name,JSON.stringify(templist))
+        
+        for (var i = 0; i < localStorage.length; i++) {
+
+            var key = localStorage.key(i);
+
+            if(key === 'song-list') {continue}
+          
+            var list = localStorage.getItem(key);
+          
+            this.audioListsx.push(JSON.parse(list));
+          
+        }
+        return this.audioListsx;
+    }
+
     async componentDidMount() {
         const data = await ProApi(this.query_name+' official song',1)
         // const data = await this.initrun(this.query_name)
-        this.setState({
-            songname: data['title'],
-            artist: data['artist'],
-            thumbnail: data['thumbnail'],
-            songurl: data['url'],
-            id: data['id'],
-        })
+        // this.setState({
+        //     songname: data['title'],
+        //     artist: data['artist'],
+        //     thumbnail: data['thumbnail'],
+        //     songurl: data['url'],
+        //     id: data['id'],
+        // })
+        this.audioListsx = await this.generateList(data,this.query_name)
+        localStorage.setItem('song-list',JSON.stringify(this.audioListsx))
+        this.setState({songname: data['title']})
+        // console.log(this.audioListsx)
         // console.log(data)
     }
 
@@ -55,7 +86,7 @@ export default class Ultimateapi extends React.Component {
             // </div>
             <div>
                 {this.state.songname ? (
-                    <MusicPlayer {...this.state} />
+                    <MusicPlayer />
                 ) : (
                     <h1>loading</h1>
                 )}
