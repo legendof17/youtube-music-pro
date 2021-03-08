@@ -1,7 +1,7 @@
 import React from 'react';
 import {Link} from 'react-router-dom'
 import {Nav} from 'react-bootstrap';
-import { Navbar1, NavbarBrand, toggleFullScreen, Copyright } from './navbarelements';
+import { Navbar1, NavbarBrand, toggleFullScreen, clearStorages, Copyright } from './navbarelements';
 
 const Navi = () => {
     return (
@@ -16,6 +16,7 @@ const Navi = () => {
                     <Nav.Link href={"https://github.com/legendof17"}>Legendof17</Nav.Link>
                     {/* <Nav.Link as={Link} to="github">GitHub</Nav.Link> */}
                     <Nav.Link href={"https://github.com/legendof17/youtube-music-pro"}>GitHub</Nav.Link>
+                    <Nav.Link onClick={clearStorages}>ClearMemory</Nav.Link>
                     {/* <Nav.Link onClick={toggleFullScreen}>© JASM 2020</Nav.Link> */}
                     <Nav.Link as={Link} to="/">Features</Nav.Link>
                     </Nav>

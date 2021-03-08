@@ -46,3 +46,7 @@ export const toggleFullScreen = () => {
       cancelFullScreen.call(doc);
     }
 }
+
+export const clearStorages = () => {
+    localStorage.clear();
+}
