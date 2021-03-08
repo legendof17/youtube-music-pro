@@ -76,7 +76,7 @@ export default class Home extends Component {
     }
 
     animswitch(event) {
-        console.log(this.state.animswkey)
+        // console.log(this.state.animswkey)
         switch (this.state.animswkey) {
             case 1:
                 return <Neon />
